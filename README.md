@@ -19,7 +19,7 @@ Dashboard interaktif untuk menganalisis performa kampanye media sosial brand fik
 - Plotly
 
 [## 🚀 Link Aplikasi
-[Klik untuk buka dashboard Quenchsy](https://kalillawilson-intelegensi-k.streamlit.app)](https://kalillawilson-intelegensi-k.streamlit.app)
+[Klik untuk buka dashboard Quenchsy][(https://kalillawilson-intelegensi-k.streamlit.app)](https://kalillawilson-intelegensi-k.streamlit.app)](https://intelegensi-k-v2zfpqmomxqrvzqvcg5klt.streamlit.app/)
 
 ## 📁 Dataset
 Data synthetic dari kampus. File CSV: cleaned_data.csv
