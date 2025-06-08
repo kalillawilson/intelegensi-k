@@ -53,3 +53,24 @@ fig5 = px.bar(top5, x='Location', y='Engagements', text='Engagements', color='Lo
 st.plotly_chart(fig5, use_container_width=True)
 
 st.markdown("💡 *Insight:* Makassar dan Jakarta menjadi dua kota dengan engagement tertinggi, menandakan potensi aktivasi lokal di wilayah tersebut.")
+from fpdf import FPDF
+
+if st.button("📄 Download Ringkasan PDF"):
+    pdf = FPDF()
+    pdf.add_page()
+    pdf.set_font("Arial", size=12)
+    
+    pdf.cell(200, 10, txt="Laporan Media Intelligence - Quenchsy", ln=True, align='C')
+    pdf.ln(10)
+
+    pdf.multi_cell(0, 10, txt="""
+1. Sentiment: Didominasi positif.
+2. Engagement Trend: Puncak di pertengahan Februari.
+3. Platform: TikTok mendominasi.
+4. Media Type: Video paling banyak dan efektif.
+5. Lokasi: Makassar & Jakarta paling aktif.
+""")
+
+    pdf.output("laporan_quenchsy.pdf")
+    with open("laporan_quenchsy.pdf", "rb") as f:
+        st.download_button("📥 Klik untuk unduh PDF", f, file_name="laporan_quenchsy.pdf")
